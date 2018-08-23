@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F3C03F43212E9CF8002F69C2 /* tvOS12Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS12Samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C03F43212E9CF8002F69C2 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C03F46212E9CF8002F69C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C03F48212E9CF8002F69C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3C03F4B212E9CF8002F69C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		F3C03F44212E9CF8002F69C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3C03F43212E9CF8002F69C2 /* tvOS12Samples.app */,
+				F3C03F43212E9CF8002F69C2 /* app.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,9 +64,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3C03F42212E9CF8002F69C2 /* tvOS12Samples */ = {
+		F3C03F42212E9CF8002F69C2 /* app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3C03F52212E9CFA002F69C2 /* Build configuration list for PBXNativeTarget "tvOS12Samples" */;
+			buildConfigurationList = F3C03F52212E9CFA002F69C2 /* Build configuration list for PBXNativeTarget "app" */;
 			buildPhases = (
 				F3C03F3F212E9CF8002F69C2 /* Sources */,
 				F3C03F40212E9CF8002F69C2 /* Frameworks */,
@@ -76,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = tvOS12Samples;
+			name = app;
 			productName = tvOS12Samples;
-			productReference = F3C03F43212E9CF8002F69C2 /* tvOS12Samples.app */;
+			productReference = F3C03F43212E9CF8002F69C2 /* app.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "tvOS12Samples" */;
+			buildConfigurationList = F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "app" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3C03F42212E9CF8002F69C2 /* tvOS12Samples */,
+				F3C03F42212E9CF8002F69C2 /* app */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "tvOS12Samples" */ = {
+		F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3C03F50212E9CFA002F69C2 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3C03F52212E9CFA002F69C2 /* Build configuration list for PBXNativeTarget "tvOS12Samples" */ = {
+		F3C03F52212E9CFA002F69C2 /* Build configuration list for PBXNativeTarget "app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3C03F53212E9CFA002F69C2 /* Debug */,
