@@ -36,7 +36,7 @@
 		F3C03F3A212E9CF8002F69C2 = {
 			isa = PBXGroup;
 			children = (
-				F3C03F45212E9CF8002F69C2 /* tvOS12Samples */,
+				F3C03F45212E9CF8002F69C2 /* app */,
 				F3C03F44212E9CF8002F69C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,7 +49,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3C03F45212E9CF8002F69C2 /* tvOS12Samples */ = {
+		F3C03F45212E9CF8002F69C2 /* app */ = {
 			isa = PBXGroup;
 			children = (
 				F3C03F46212E9CF8002F69C2 /* AppDelegate.swift */,
@@ -58,7 +58,7 @@
 				F3C03F4D212E9CFA002F69C2 /* Assets.xcassets */,
 				F3C03F4F212E9CFA002F69C2 /* Info.plist */,
 			);
-			path = tvOS12Samples;
+			path = app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +271,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AXCX2DUCQ;
-				INFOPLIST_FILE = tvOS12Samples/Info.plist;
+				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +290,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AXCX2DUCQ;
-				INFOPLIST_FILE = tvOS12Samples/Info.plist;
+				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
