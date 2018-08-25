@@ -10,12 +10,13 @@ import TVUIKit
 class TVPosterViewSampleController: UIViewController {
     func adoptSubview(to cell: UICollectionViewCell, for indexPath: IndexPath) {
         let posterView: TVPosterView = {
-            if let posterView = cell.contentView.searchSubview(for: TVPosterView.self) {
+            let contentView = cell.contentView
+            if let posterView = contentView.searchSubview(for: TVPosterView.self) {
                 return posterView
             }
             let posterView = TVPosterView(image: nil)
-            print("### posterView: \(posterView)")
-            cell.contentView.addSubview(posterView)
+            posterView.frame = contentView.bounds
+            contentView.addSubview(posterView)
             return posterView
         }()
 

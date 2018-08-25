@@ -34,6 +34,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MIq-NP-dee" kind="show" id="Wwm-Sq-3qo"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gG4-kD-br0" style="IBUITableViewCellStyleDefault" id="n5U-Bb-csN">
                                         <rect key="frame" x="110" y="80" width="1700" height="66"/>
@@ -134,6 +137,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfX-ja-pmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368" y="-37"/>
+        </scene>
+        <!--TVPosterView-->
+        <scene sceneID="K9G-sV-nIk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVPosterView" id="MIq-NP-dee" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhm-AY-oVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1498" y="-324"/>
         </scene>
     </scenes>
 </document>
