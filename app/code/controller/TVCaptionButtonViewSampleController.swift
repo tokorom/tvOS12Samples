@@ -19,13 +19,15 @@ class TVCaptionButtonViewSampleController: UIViewController {
     }
 
     private func addSamples() {
-        for buttonObject in samples {
-            addCaptionButton(with: buttonObject)
+        for index in samples.indices {
+            let buttonObject = samples[index]
+            addCaptionButton(with: buttonObject, at: index)
         }
     }
 
-    private func addCaptionButton(with buttonObject: ButtonObject) {
+    private func addCaptionButton(with buttonObject: ButtonObject, at index: Int) {
         let captionButton = TVCaptionButtonView()
+        captionButton.tag = index
 
         switch buttonObject.content {
         case .text(let text):
@@ -37,10 +39,16 @@ class TVCaptionButtonViewSampleController: UIViewController {
         captionButton.title = buttonObject.title
         captionButton.subtitle = buttonObject.subtitle
 
+        captionButton.addTarget(self, action: #selector(self.captionButtonDidTouch(captionButton:)), for: .primaryActionTriggered)
+
         stackView?.addArrangedSubview(captionButton)
 
         DispatchQueue.main.async {
             print(captionButton)
         }
+    }
+
+    @IBAction func captionButtonDidTouch(captionButton: TVCaptionButtonView) {
+        print("captionButtonDidTouch: \(captionButton.tag)")
     }
 }
