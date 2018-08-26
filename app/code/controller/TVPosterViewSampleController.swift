@@ -42,6 +42,7 @@ class TVPosterViewSampleController: UIViewController {
             // posterView.imageView.contentMode = .scaleAspectFit
             // print("### xxx: \(posterView.imageView.contentMode.rawValue)")
 
+            posterView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
             contentView.addSubview(posterView)
             return posterView
         }()

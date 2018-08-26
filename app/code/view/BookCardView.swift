@@ -37,4 +37,11 @@ class BookCardView: UIView {
             imageView?.image = value
         }
     }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        titleLabel?.enablesMarqueeWhenAncestorFocused = true
+        subtitleLabel?.enablesMarqueeWhenAncestorFocused = true
+    }
 }
