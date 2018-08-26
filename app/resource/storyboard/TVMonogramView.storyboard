@@ -12,7 +12,7 @@
         <!--TVMonogramView-->
         <scene sceneID="YoS-NR-abT">
             <objects>
-                <viewController id="nSv-bk-Cw8" customClass="TVCardViewSampleController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nSv-bk-Cw8" customClass="TVMonogramViewSampleViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Tj-yG-njb"/>
                         <viewControllerLayoutGuide type="bottom" id="uRi-1e-csL"/>

@@ -94,6 +94,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2HO-LB-7sU" kind="show" id="dxv-9E-0lo"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ITR-jO-BLX" style="IBUITableViewCellStyleDefault" id="ukC-mM-cMG">
                                         <rect key="frame" x="110" y="320" width="1700" height="66"/>
@@ -167,6 +170,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xv-u8-V3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1297" y="-150"/>
+        </scene>
+        <!--TVMonogramView-->
+        <scene sceneID="G6O-fm-3Af">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVMonogramView" id="2HO-LB-7sU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWz-qj-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="-27"/>
         </scene>
     </scenes>
 </document>
