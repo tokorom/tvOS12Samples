@@ -28,16 +28,27 @@
                                     <constraint firstAttribute="height" constant="200" id="oms-KW-4HK"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybd-AH-uL9">
+                                <rect key="frame" x="862" y="934" width="196" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Option"/>
+                                <connections>
+                                    <action selector="optionMenuActionWithSender:" destination="eff-l2-vqq" eventType="primaryActionTriggered" id="Q5g-aS-Nli"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="u1k-4L-9eA" firstAttribute="centerY" secondItem="ouI-S6-liC" secondAttribute="centerY" id="AyH-ZL-xK7"/>
+                            <constraint firstItem="ccf-8L-4wC" firstAttribute="top" secondItem="Ybd-AH-uL9" secondAttribute="bottom" id="Zsp-2a-dh0"/>
                             <constraint firstItem="u1k-4L-9eA" firstAttribute="centerX" secondItem="ouI-S6-liC" secondAttribute="centerX" id="ayb-5R-vzn"/>
+                            <constraint firstItem="Ybd-AH-uL9" firstAttribute="centerX" secondItem="ouI-S6-liC" secondAttribute="centerX" id="fLy-aj-0OZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LY3-Zf-TWJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="TVCaptionButtonView" id="gMT-4y-pkD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="optionButton" destination="Ybd-AH-uL9" id="H1j-Tv-Lax"/>
                         <outlet property="stackView" destination="u1k-4L-9eA" id="Igm-KX-vKO"/>
                     </connections>
                 </viewController>
