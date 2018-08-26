@@ -26,11 +26,20 @@ class TVCardViewSampleController: UIViewController {
             }
             let cardView = TVCardView()
             cardView.frame = contentView.bounds
+            // cardView.cardBackgroundColor = UIColor.red
+            cardView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
             contentView.addSubview(cardView)
             guard let bookCard: BookCardView = UINib.load() else {
                 return cardView
             }
-            bookCard.frame = cardView.contentView.bounds
+            let padding: CGFloat = 20
+            bookCard.frame = CGRect(
+                x: padding,
+                y: padding,
+                width: cardView.bounds.width - padding * 2,
+                height: cardView.bounds.height - padding * 2
+            )
+            bookCard.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
             cardView.contentView.addSubview(bookCard)
             return cardView
         }()
