@@ -42,10 +42,6 @@ class TVCaptionButtonViewSampleController: UIViewController {
         captionButton.addTarget(self, action: #selector(self.captionButtonDidTouch(captionButton:)), for: .primaryActionTriggered)
 
         stackView?.addArrangedSubview(captionButton)
-
-        DispatchQueue.main.async {
-            print(captionButton)
-        }
     }
 
     @IBAction func captionButtonDidTouch(captionButton: TVCaptionButtonView) {
