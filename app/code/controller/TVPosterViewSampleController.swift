@@ -26,6 +26,21 @@ class TVPosterViewSampleController: UIViewController {
             }
             let posterView = TVPosterView(image: nil)
             posterView.frame = contentView.bounds
+
+            /*
+            print("### contentView: \(posterView.contentView)")
+            print("### contentSize: \(posterView.contentSize)")
+            print("### contentViewInsets: \(posterView.contentViewInsets)")
+            print("### headerView: \(posterView.headerView)")
+            print("### footerView: \(posterView.footerView)")
+            print("### focusSizeIncrease: \(posterView.focusSizeIncrease)")
+            */
+
+            // 画像部分のsizeを指定
+            // posterView.imageView.frame.size = CGSize(width: 50, height: 100)
+            // posterView.imageView.contentMode = .scaleAspectFit
+            // print("### xxx: \(posterView.imageView.contentMode.rawValue)")
+
             contentView.addSubview(posterView)
             return posterView
         }()
@@ -44,7 +59,7 @@ class TVPosterViewSampleController: UIViewController {
 
 extension TVPosterViewSampleController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return books.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
