@@ -54,6 +54,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gDT-w5-CZW" kind="show" id="hnf-2R-Th5"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ltw-xi-PXM" style="IBUITableViewCellStyleDefault" id="4JT-nO-lnZ">
                                         <rect key="frame" x="110" y="160" width="1700" height="66"/>
@@ -136,7 +139,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfX-ja-pmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="-37"/>
+            <point key="canvasLocation" x="-119" y="-204"/>
         </scene>
         <!--TVPosterView-->
         <scene sceneID="K9G-sV-nIk">
@@ -144,7 +147,15 @@
                 <viewControllerPlaceholder storyboardName="TVPosterView" id="MIq-NP-dee" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhm-AY-oVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498" y="-324"/>
+            <point key="canvasLocation" x="1287" y="-424"/>
+        </scene>
+        <!--TVCaptionButtonView-->
+        <scene sceneID="hxD-tU-uiV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVCaptionButtonView" id="gDT-w5-CZW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Olf-dt-MD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="-282"/>
         </scene>
     </scenes>
 </document>

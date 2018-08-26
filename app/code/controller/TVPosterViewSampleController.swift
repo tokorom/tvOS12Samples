@@ -8,17 +8,17 @@ import UIKit
 import TVUIKit
 
 class TVPosterViewSampleController: UIViewController {
-    lazy var books: [Book] = SampleBooks.shared.books
+    lazy var samples: [Book] = SampleBooks.shared.samples
 
-    func book(for indexPath: IndexPath) -> Book? {
+    private func book(for indexPath: IndexPath) -> Book? {
         let index = indexPath.item
-        guard let book = books.indices.contains(index) ? books[index] : nil else {
+        guard let book = samples.indices.contains(index) ? samples[index] : nil else {
             return nil
         }
         return book
     }
 
-    func adoptSubview(to cell: UICollectionViewCell, for indexPath: IndexPath) {
+    private func adoptSubview(to cell: UICollectionViewCell, for indexPath: IndexPath) {
         let posterView: TVPosterView = {
             let contentView = cell.contentView
             if let posterView = contentView.searchSubview(for: TVPosterView.self) {
@@ -59,7 +59,7 @@ class TVPosterViewSampleController: UIViewController {
 
 extension TVPosterViewSampleController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        return samples.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

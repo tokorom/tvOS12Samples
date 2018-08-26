@@ -16,6 +16,10 @@
 		F3C03F5F212E9E62002F69C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C03F5B212E9E62002F69C2 /* Main.storyboard */; };
 		F3C03F60212E9E62002F69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C03F5C212E9E62002F69C2 /* Assets.xcassets */; };
 		F3C03F62212E9EEE002F69C2 /* TVUIKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C03F61212E9EEE002F69C2 /* TVUIKit.storyboard */; };
+		F3F80B69213290190086BBFB /* ButtonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F80B68213290190086BBFB /* ButtonObject.swift */; };
+		F3F80B6B213290D20086BBFB /* SampleButtonObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F80B6A213290D20086BBFB /* SampleButtonObjects.swift */; };
+		F3F80B6D2132911E0086BBFB /* TVCaptionButtonView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F80B6C2132911E0086BBFB /* TVCaptionButtonView.storyboard */; };
+		F3F80B6F213292630086BBFB /* TVCaptionButtonViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F80B6E213292620086BBFB /* TVCaptionButtonViewSampleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		F3C03F5B212E9E62002F69C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F3C03F5C212E9E62002F69C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3C03F61212E9EEE002F69C2 /* TVUIKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVUIKit.storyboard; sourceTree = "<group>"; };
+		F3F80B68213290190086BBFB /* ButtonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonObject.swift; sourceTree = "<group>"; };
+		F3F80B6A213290D20086BBFB /* SampleButtonObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleButtonObjects.swift; sourceTree = "<group>"; };
+		F3F80B6C2132911E0086BBFB /* TVCaptionButtonView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVCaptionButtonView.storyboard; sourceTree = "<group>"; };
+		F3F80B6E213292620086BBFB /* TVCaptionButtonViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCaptionButtonViewSampleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				F398D34A21325B9D00F4E075 /* Book.swift */,
+				F3F80B68213290190086BBFB /* ButtonObject.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -63,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				F398D34C21325B9D00F4E075 /* SampleBooks.swift */,
+				F3F80B6A213290D20086BBFB /* SampleButtonObjects.swift */,
 			);
 			path = dataSource;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 			children = (
 				F3C03F58212E9E62002F69C2 /* AppDelegate.swift */,
 				F398D341213143B700F4E075 /* TVPosterViewSampleController.swift */,
+				F3F80B6E213292620086BBFB /* TVCaptionButtonViewSampleController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 				F3C03F5B212E9E62002F69C2 /* Main.storyboard */,
 				F3C03F61212E9EEE002F69C2 /* TVUIKit.storyboard */,
 				F398D33F2131402D00F4E075 /* TVPosterView.storyboard */,
+				F3F80B6C2132911E0086BBFB /* TVCaptionButtonView.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -190,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F80B6D2132911E0086BBFB /* TVCaptionButtonView.storyboard in Resources */,
 				F398D3402131402D00F4E075 /* TVPosterView.storyboard in Resources */,
 				F3C03F62212E9EEE002F69C2 /* TVUIKit.storyboard in Resources */,
 				F3C03F60212E9E62002F69C2 /* Assets.xcassets in Resources */,
@@ -205,9 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F398D34D21325B9D00F4E075 /* Book.swift in Sources */,
+				F3F80B6F213292630086BBFB /* TVCaptionButtonViewSampleController.swift in Sources */,
+				F3F80B6B213290D20086BBFB /* SampleButtonObjects.swift in Sources */,
 				F3C03F5E212E9E62002F69C2 /* AppDelegate.swift in Sources */,
 				F398D34E21325B9D00F4E075 /* SampleBooks.swift in Sources */,
 				F398D348213145B700F4E075 /* UIView+Utils.swift in Sources */,
+				F3F80B69213290190086BBFB /* ButtonObject.swift in Sources */,
 				F398D342213143B700F4E075 /* TVPosterViewSampleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

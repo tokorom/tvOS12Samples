@@ -9,7 +9,7 @@ import Foundation
 class SampleBooks {
     static let shared = SampleBooks()
 
-    let books: [Book] = [
+    let samples: [Book] = [
         Book(title: "iOS 11 Programming", subtitle: "第一線の開発者陣による「iOS 11 Programming」執筆プロジェクト！", imageName: "ios11", smallImageName: "ios11_small"),
         Book(title: "iOS 12 Programming", subtitle: "モダンなアプリを実現する「iOS 12 Programming」執筆プロジェクト！", imageName: "ios12", smallImageName: "ios12_small"),
         Book(title: "はじめてのUIデザイン", subtitle: "UIデザインを本質から解説する「はじめてのUIデザイン」執筆プロジェクト！", imageName: "ui", smallImageName: "ui_small"),
