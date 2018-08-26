@@ -10,6 +10,8 @@
 		F398D3402131402D00F4E075 /* TVPosterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F398D33F2131402D00F4E075 /* TVPosterView.storyboard */; };
 		F398D342213143B700F4E075 /* TVPosterViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D341213143B700F4E075 /* TVPosterViewSampleController.swift */; };
 		F398D348213145B700F4E075 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D347213145B700F4E075 /* UIView+Utils.swift */; };
+		F398D34D21325B9D00F4E075 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D34A21325B9D00F4E075 /* Book.swift */; };
+		F398D34E21325B9D00F4E075 /* SampleBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D34C21325B9D00F4E075 /* SampleBooks.swift */; };
 		F3C03F5E212E9E62002F69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C03F58212E9E62002F69C2 /* AppDelegate.swift */; };
 		F3C03F5F212E9E62002F69C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C03F5B212E9E62002F69C2 /* Main.storyboard */; };
 		F3C03F60212E9E62002F69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C03F5C212E9E62002F69C2 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		F398D33F2131402D00F4E075 /* TVPosterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVPosterView.storyboard; sourceTree = "<group>"; };
 		F398D341213143B700F4E075 /* TVPosterViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPosterViewSampleController.swift; sourceTree = "<group>"; };
 		F398D347213145B700F4E075 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		F398D34A21325B9D00F4E075 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		F398D34C21325B9D00F4E075 /* SampleBooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleBooks.swift; sourceTree = "<group>"; };
 		F3C03F43212E9CF8002F69C2 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C03F4F212E9CFA002F69C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C03F58212E9E62002F69C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,22 @@
 				F398D347213145B700F4E075 /* UIView+Utils.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		F398D34921325B9D00F4E075 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F398D34A21325B9D00F4E075 /* Book.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F398D34B21325B9D00F4E075 /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F398D34C21325B9D00F4E075 /* SampleBooks.swift */,
+			);
+			path = dataSource;
 			sourceTree = "<group>";
 		};
 		F3C03F3A212E9CF8002F69C2 = {
@@ -76,7 +96,9 @@
 		F3C03F55212E9E62002F69C2 /* code */ = {
 			isa = PBXGroup;
 			children = (
+				F398D34921325B9D00F4E075 /* model */,
 				F3C03F56212E9E62002F69C2 /* controller */,
+				F398D34B21325B9D00F4E075 /* dataSource */,
 				F398D346213145B700F4E075 /* extension */,
 			);
 			path = code;
@@ -182,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398D34D21325B9D00F4E075 /* Book.swift in Sources */,
 				F3C03F5E212E9E62002F69C2 /* AppDelegate.swift in Sources */,
+				F398D34E21325B9D00F4E075 /* SampleBooks.swift in Sources */,
 				F398D348213145B700F4E075 /* UIView+Utils.swift in Sources */,
 				F398D342213143B700F4E075 /* TVPosterViewSampleController.swift in Sources */,
 			);

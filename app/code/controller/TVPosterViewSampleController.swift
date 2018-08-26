@@ -8,6 +8,16 @@ import UIKit
 import TVUIKit
 
 class TVPosterViewSampleController: UIViewController {
+    lazy var books: [Book] = SampleBooks.shared.books
+
+    func book(for indexPath: IndexPath) -> Book? {
+        let index = indexPath.item
+        guard let book = books.indices.contains(index) ? books[index] : nil else {
+            return nil
+        }
+        return book
+    }
+
     func adoptSubview(to cell: UICollectionViewCell, for indexPath: IndexPath) {
         let posterView: TVPosterView = {
             let contentView = cell.contentView
@@ -20,8 +30,13 @@ class TVPosterViewSampleController: UIViewController {
             return posterView
         }()
 
-        posterView.title = "TITLE"
-        posterView.subtitle = "SUBTITLE----------------END"
+        guard let book = book(for: indexPath) else {
+            return
+        }
+
+        posterView.title = book.title
+        posterView.subtitle = book.subtitle
+        posterView.image = UIImage(named: book.imageName)
     }
 }
 
