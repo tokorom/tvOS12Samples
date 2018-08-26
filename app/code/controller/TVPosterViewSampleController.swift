@@ -24,6 +24,7 @@ class TVPosterViewSampleController: UIViewController {
             if let posterView = contentView.searchSubview(for: TVPosterView.self) {
                 return posterView
             }
+
             let posterView = TVPosterView(image: nil)
             posterView.frame = contentView.bounds
 

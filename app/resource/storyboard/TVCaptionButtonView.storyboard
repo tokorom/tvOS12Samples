@@ -39,9 +39,9 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="u1k-4L-9eA" firstAttribute="centerY" secondItem="ouI-S6-liC" secondAttribute="centerY" id="AyH-ZL-xK7"/>
-                            <constraint firstItem="ccf-8L-4wC" firstAttribute="top" secondItem="Ybd-AH-uL9" secondAttribute="bottom" id="Zsp-2a-dh0"/>
                             <constraint firstItem="u1k-4L-9eA" firstAttribute="centerX" secondItem="ouI-S6-liC" secondAttribute="centerX" id="ayb-5R-vzn"/>
                             <constraint firstItem="Ybd-AH-uL9" firstAttribute="centerX" secondItem="ouI-S6-liC" secondAttribute="centerX" id="fLy-aj-0OZ"/>
+                            <constraint firstItem="LY3-Zf-TWJ" firstAttribute="bottom" secondItem="Ybd-AH-uL9" secondAttribute="bottom" id="iHO-R8-RJU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LY3-Zf-TWJ"/>
                     </view>

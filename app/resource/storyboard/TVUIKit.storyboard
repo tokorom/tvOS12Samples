@@ -74,6 +74,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="M7p-TL-ui1" kind="show" id="VWi-ud-5rg"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="EhP-yh-atd" style="IBUITableViewCellStyleDefault" id="ZnG-IZ-Ylh">
                                         <rect key="frame" x="110" y="240" width="1700" height="66"/>
@@ -156,6 +159,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olf-dt-MD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1297" y="-282"/>
+        </scene>
+        <!--TVCardView-->
+        <scene sceneID="krA-rc-aJm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVCardView" id="M7p-TL-ui1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xv-u8-V3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="-150"/>
         </scene>
     </scenes>
 </document>
