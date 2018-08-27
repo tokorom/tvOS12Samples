@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3108D062133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3108D052133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift */; };
+		F3108D082133A44900E9B6B2 /* TVDigitEntryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3108D072133A44900E9B6B2 /* TVDigitEntryViewController.storyboard */; };
+		F3108D0A2133A5EC00E9B6B2 /* TVLockupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3108D092133A5EC00E9B6B2 /* TVLockupView.storyboard */; };
+		F3108D0C2133A60D00E9B6B2 /* TVLockupViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3108D0B2133A60D00E9B6B2 /* TVLockupViewSampleController.swift */; };
 		F398D3402131402D00F4E075 /* TVPosterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F398D33F2131402D00F4E075 /* TVPosterView.storyboard */; };
 		F398D342213143B700F4E075 /* TVPosterViewSampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D341213143B700F4E075 /* TVPosterViewSampleController.swift */; };
 		F398D348213145B700F4E075 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398D347213145B700F4E075 /* UIView+Utils.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3108D052133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDigitEntrySampleViewController.swift; sourceTree = "<group>"; };
+		F3108D072133A44900E9B6B2 /* TVDigitEntryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVDigitEntryViewController.storyboard; sourceTree = "<group>"; };
+		F3108D092133A5EC00E9B6B2 /* TVLockupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVLockupView.storyboard; sourceTree = "<group>"; };
+		F3108D0B2133A60D00E9B6B2 /* TVLockupViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVLockupViewSampleController.swift; sourceTree = "<group>"; };
 		F398D33F2131402D00F4E075 /* TVPosterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVPosterView.storyboard; sourceTree = "<group>"; };
 		F398D341213143B700F4E075 /* TVPosterViewSampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPosterViewSampleController.swift; sourceTree = "<group>"; };
 		F398D347213145B700F4E075 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 				F3F80B6E213292620086BBFB /* TVCaptionButtonViewSampleController.swift */,
 				F3E9C2B72132B13400AD96F3 /* TVCardViewSampleViewController.swift */,
 				F3E9C2BD2132F83C00AD96F3 /* TVMonogramViewSampleViewController.swift */,
+				F3108D0B2133A60D00E9B6B2 /* TVLockupViewSampleController.swift */,
+				F3108D052133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -167,6 +177,8 @@
 				F3F80B6C2132911E0086BBFB /* TVCaptionButtonView.storyboard */,
 				F3E9C2B52132B0F500AD96F3 /* TVCardView.storyboard */,
 				F3E9C2BF2132F85100AD96F3 /* TVMonogramView.storyboard */,
+				F3108D092133A5EC00E9B6B2 /* TVLockupView.storyboard */,
+				F3108D072133A44900E9B6B2 /* TVDigitEntryViewController.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -248,11 +260,13 @@
 				F3E9C2B62132B0F500AD96F3 /* TVCardView.storyboard in Resources */,
 				F3F80B6D2132911E0086BBFB /* TVCaptionButtonView.storyboard in Resources */,
 				F398D3402131402D00F4E075 /* TVPosterView.storyboard in Resources */,
+				F3108D082133A44900E9B6B2 /* TVDigitEntryViewController.storyboard in Resources */,
 				F3E9C2B12132AEB500AD96F3 /* BookCardView.xib in Resources */,
 				F3C03F62212E9EEE002F69C2 /* TVUIKit.storyboard in Resources */,
 				F3E9C2C02132F85100AD96F3 /* TVMonogramView.storyboard in Resources */,
 				F3C03F60212E9E62002F69C2 /* Assets.xcassets in Resources */,
 				F3C03F5F212E9E62002F69C2 /* Main.storyboard in Resources */,
+				F3108D0A2133A5EC00E9B6B2 /* TVLockupView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +291,8 @@
 				F3E9C2B42132AFE700AD96F3 /* BookCardView.swift in Sources */,
 				F3E9C2C42132FA5C00AD96F3 /* Author.swift in Sources */,
 				F398D342213143B700F4E075 /* TVPosterViewSampleController.swift in Sources */,
+				F3108D0C2133A60D00E9B6B2 /* TVLockupViewSampleController.swift in Sources */,
+				F3108D062133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -114,6 +114,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bjc-Gv-I2e" kind="show" id="x9d-Vg-iyj"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="drF-Q7-d4T" style="IBUITableViewCellStyleDefault" id="bot-NW-zPJ">
                                         <rect key="frame" x="110" y="400" width="1700" height="66"/>
@@ -131,6 +134,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1gy-BP-AOo" kind="show" id="XLF-2i-A4h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -178,6 +184,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWz-qj-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-27"/>
+        </scene>
+        <!--TVLockupView-->
+        <scene sceneID="Ob0-JC-ywZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVLockupView" id="bjc-Gv-I2e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvD-9t-fWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--TVDigitEntryViewController-->
+        <scene sceneID="yfl-k5-l1y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TVDigitEntryViewController" id="1gy-BP-AOo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxZ-w4-m1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="140"/>
         </scene>
     </scenes>
 </document>
