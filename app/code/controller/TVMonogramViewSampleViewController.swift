@@ -35,13 +35,9 @@ class TVMonogramViewSampleViewController: UIViewController {
             return
         }
 
-        switch author.name {
-        case .simple(let title, let subtitle):
-            monogramView.title = title
-            monogramView.subtitle = subtitle
-        case .components(let components):
-            monogramView.personNameComponents = components
-        }
+        monogramView.title = author.name
+        monogramView.subtitle = author.category
+        monogramView.personNameComponents = author.personNameComponents
 
         if let imageName = author.imageName {
             monogramView.image = UIImage(named: imageName)

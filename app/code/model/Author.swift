@@ -7,15 +7,15 @@
 import Foundation
 
 struct Author {
-    let name: Name
+    let name: String?
+    let category: String?
     let imageName: String?
-}
+    let personNameComponents: PersonNameComponents?
 
-// MARK: - Extension
-
-extension Author {
-    enum Name {
-        case simple(String?, String?)
-        case components(PersonNameComponents)
+    init(name: String? = nil, category: String? = nil, imageName: String? = nil, personNameComponents: PersonNameComponents? = nil) {
+        self.name = name
+        self.category = category
+        self.imageName = imageName
+        self.personNameComponents = personNameComponents
     }
 }
