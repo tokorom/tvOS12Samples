@@ -15,8 +15,8 @@ class BookCardView: UIView {
         get {
             return titleLabel?.text
         }
-        set(value) {
-            titleLabel?.text = value
+        set {
+            titleLabel?.text = newValue
         }
     }
 
@@ -24,8 +24,8 @@ class BookCardView: UIView {
         get {
             return subtitleLabel?.text
         }
-        set(value) {
-            subtitleLabel?.text = value
+        set {
+            subtitleLabel?.text = newValue
         }
     }
 
@@ -33,8 +33,8 @@ class BookCardView: UIView {
         get {
             return imageView?.image
         }
-        set(value) {
-            imageView?.image = value
+        set {
+            imageView?.image = newValue
         }
     }
 

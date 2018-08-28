@@ -14,6 +14,7 @@ class TVLockupViewSampleController: UIViewController {
     }
 
     private func addSampleView(to view: UIView, for indexPath: IndexPath) {
+        // サンプルをシンプルにするためセルの再利用をきちんと考慮していない
         clearAllSubviews(from: view)
 
         guard let sample = Sample(rawValue: indexPath.item) else {
@@ -40,37 +41,58 @@ class TVLockupViewSampleController: UIViewController {
         let imageSize = CGSize(width: 200, height: 200)
 
         lockupView.contentSize = imageSize
-        lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -40, leading: -40, bottom: -40, trailing: -40)
+        lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -14, leading: -14, bottom: -14, trailing: -14)
 
-        let baseView = UIView()
-        let imageView = UIImageView(image: UIImage(named: "tokoro"))
-        baseView.frame = CGRect(origin: .zero, size: imageSize)
-        imageView.frame = CGRect(origin: .zero, size: imageSize)
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = imageSize.width / 2
-        imageView.clipsToBounds = true
-        baseView.addSubview(imageView)
+        guard let faceView: FaceView = UINib.load() else {
+            assertionFailure()
+            return
+        }
 
-        baseView.layer.cornerRadius = imageSize.width / 2
-        baseView.layer.shadowOpacity = 0.1
-        baseView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        faceView.frame = CGRect(origin: .zero, size: imageSize)
 
-        lockupView.contentView.addSubview(baseView)
+        faceView.image = UIImage(named: "tokoro")
+        lockupView.contentView.addSubview(faceView)
 
         let footerView = TVLockupHeaderFooterView()
-        footerView.showsOnlyWhenAncestorFocused = true
+        // footerView.showsOnlyWhenAncestorFocused = true
         footerView.titleLabel?.text = "所 友太"
         footerView.subtitleLabel?.text = "Spinners"
 
         lockupView.footerView = footerView
-
         lockupView.sizeToFit()
-
-        print("### \(lockupView)")
-        print("### \(lockupView.contentView)")
-        print("### \(imageView)")
-
         view.addSubview(lockupView)
+
+        // サンプルをシンプルにするためにこういう書き方にする
+        // shadowもアニメーションさせるには別途CABasicAnimationなど使うこと
+        faceView.animationsForNormal = {
+            faceView.transform = CGAffineTransform.identity
+
+            faceView.layer.shadowOpacity = 0.1
+            faceView.layer.shadowRadius = 3
+            faceView.layer.shadowOffset = CGSize(width: 0, height: 4)
+
+            footerView.titleLabel?.textColor = UIColor.black
+            footerView.titleLabel?.layer.shadowOpacity = 0
+            footerView.subtitleLabel?.textColor = UIColor.black
+            footerView.subtitleLabel?.layer.shadowOpacity = 0
+        }
+
+        // サンプルをシンプルにするためにこういう書き方にする
+        // shadowもアニメーションさせるには別途CABasicAnimationなど使うこと
+        faceView.animationsForFocused = {
+            faceView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+
+            faceView.layer.shadowOpacity = 0.3
+            faceView.layer.shadowRadius = 30
+            faceView.layer.shadowOffset = CGSize(width: 0, height: 20)
+
+            footerView.titleLabel?.textColor = UIColor.white
+            footerView.titleLabel?.layer.shadowOpacity = 0.3
+            footerView.titleLabel?.layer.shadowOffset = CGSize(width: 0, height: 4)
+            footerView.subtitleLabel?.textColor = UIColor.white
+            footerView.subtitleLabel?.layer.shadowOpacity = 0.3
+            footerView.subtitleLabel?.layer.shadowOffset = CGSize(width: 0, height: 4)
+        }
     }
 }
 

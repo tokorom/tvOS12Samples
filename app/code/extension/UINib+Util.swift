@@ -18,7 +18,8 @@ extension UINib {
     }
 
     class func nibName<V: UIView>(for type: V.Type) -> String {
-        let className = NSStringFromClass(type)
+        let className = String(describing: type.self)
+        print("### className: \(className)")
         guard let lastComponent = className.split(separator: ".").last else {
             fatalError("Invalid xib for: \(type)")
         }
