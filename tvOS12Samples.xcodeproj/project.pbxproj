@@ -243,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "Sample" */;
+			buildConfigurationList = F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "tvOS12Samples" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -466,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "Sample" */ = {
+		F3C03F3E212E9CF8002F69C2 /* Build configuration list for PBXProject "tvOS12Samples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3C03F50212E9CFA002F69C2 /* Debug */,

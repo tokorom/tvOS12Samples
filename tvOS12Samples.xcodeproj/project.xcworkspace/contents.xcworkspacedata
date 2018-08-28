@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/tokorom/develop/spinners/tvOS12Samples/Sample.xcodeproj">
+      location = "self:/Users/tokorom/develop/spinners/tvOS12Samples/tvOS12Samples.xcodeproj">
    </FileRef>
 </Workspace>
