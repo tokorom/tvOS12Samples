@@ -1,20 +1,17 @@
 //
 //  ViewController.swift
-//  iOS
 //
-//  Created by tokorom on 2018/08/29.
-//  Copyright © 2018年 Spinners. All rights reserved.
+//  Created by ToKoRo on 2018-08-29.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var idTextField: UITextField?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        idTextField?.becomeFirstResponder()
     }
-
-
 }
-

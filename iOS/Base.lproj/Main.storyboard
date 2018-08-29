@@ -110,6 +110,9 @@
                     <navigationItem key="navigationItem" title="tvOS 12 Samples" prompt="パスワード・オートフィル テスト用" id="vZy-py-vaK">
                         <barButtonItem key="backBarButtonItem" title=" " id="szD-ra-pnR"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="idTextField" destination="iIT-9N-fr3" id="ceL-wy-D1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
