@@ -15,6 +15,7 @@ class SampleAuthors {
         Author(name: "吉田 悠一", category: "デンソーアイティーラボラトリ", imageName: "yoshida"),
         Author(name: "加藤 尋樹", category: "はてな", imageName: "kato"),
         Author(name: "池田 翔", category: "はてな", imageName: "ikeda"),
+        Author(name: "佐藤 剛士", category: "MAMORIO", imageName: "sato"),
 
         Author(),
         Author(name: "Title"),
