@@ -22,6 +22,12 @@ class SampleAuthors {
         Author(category: "Subtitle"),
         Author(name: "Yuta Tokoro"),
 
+        Author(name: "Yuta Tokoro", personNameComponents: {
+            var components = PersonNameComponents()
+            components.givenName = "Yuta"
+            components.familyName = "Tokoro"
+            return components
+        }()),
         Author(personNameComponents: {
             var components = PersonNameComponents()
             components.givenName = "Johnathan"
