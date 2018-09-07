@@ -27,6 +27,7 @@ class TVCardViewSampleController: UIViewController {
 
             let cardView = TVCardView()
             cardView.frame = contentView.bounds
+            // cardView.cardBackgroundColor = UIColor.black
             contentView.addSubview(cardView)
 
             guard let bookCard: BookCardView = UINib.load() else {
