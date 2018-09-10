@@ -136,7 +136,6 @@ class TVLockupViewSampleController: UIViewController {
 
     private func addColoredFrame(to view: UIView, optionalLogic: ((TVLockupView) -> Void)? = nil) {
         let lockupView = TVLockupView()
-        lockupView.frame = view.bounds
         lockupView.contentSize = CGSize(width: 200, height: 200)
 
         optionalLogic?(lockupView)
@@ -185,7 +184,6 @@ class TVLockupViewSampleController: UIViewController {
 
     private func addSimple(to view: UIView) {
         let lockupView = TVLockupView()
-        lockupView.frame = view.bounds
         lockupView.contentSize = CGSize(width: 200, height: 200)
 
         let imageView = UIImageView(image: UIImage(named: "tokoro"))
