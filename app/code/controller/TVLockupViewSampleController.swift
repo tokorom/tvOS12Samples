@@ -9,6 +9,9 @@ import TVUIKit
 
 class TVLockupViewSampleController: UIViewController {
     private enum Sample: Int, CaseIterable {
+        case coloredFrame
+        case coloredFrameWithFocusSizeIncrease
+        case coloredFrameWithContentViewInsets
         case mimickedMonogramView
         case customizedCaptionButton
     }
@@ -22,6 +25,12 @@ class TVLockupViewSampleController: UIViewController {
         }
 
         switch sample {
+        case .coloredFrame:
+            addColoredFrame(to: view)
+        case .coloredFrameWithFocusSizeIncrease:
+            addColoredFrameWithFocusSizeIncrease(to: view)
+        case .coloredFrameWithContentViewInsets:
+            addColoredFrameWithContentViewInsets(to: view)
         case .mimickedMonogramView:
             addMimickedMonogramView(to: view)
         case .customizedCaptionButton:
@@ -108,6 +117,53 @@ class TVLockupViewSampleController: UIViewController {
 
         captionButton.sizeToFit()
         view.addSubview(captionButton)
+    }
+
+    private func addColoredFrame(to view: UIView, optionalLogic: ((TVLockupView) -> Void)? = nil) {
+        let lockupView = TVLockupView()
+        lockupView.frame = view.bounds
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+
+        optionalLogic?(lockupView)
+
+        lockupView.backgroundColor = UIColor.red
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        lockupView.headerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "Header"
+            return view
+        }()
+        lockupView.footerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "Footer"
+            return view
+        }()
+
+        lockupView.headerView?.backgroundColor = UIColor.green
+        lockupView.footerView?.backgroundColor = UIColor.green
+
+        lockupView.sizeToFit()
+
+        view.addSubview(lockupView)
+
+        DispatchQueue.main.async {
+            print(lockupView)
+            print(lockupView.contentView)
+        }
+    }
+
+    private func addColoredFrameWithFocusSizeIncrease(to view: UIView) {
+        addColoredFrame(to: view) { lockupView in
+            lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
+        }
+    }
+
+    private func addColoredFrameWithContentViewInsets(to view: UIView) {
+        addColoredFrame(to: view) { lockupView in
+            lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
+            lockupView.contentViewInsets = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
+        }
     }
 }
 
