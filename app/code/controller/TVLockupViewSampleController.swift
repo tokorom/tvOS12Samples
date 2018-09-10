@@ -12,6 +12,7 @@ class TVLockupViewSampleController: UIViewController {
         case coloredFrame
         case coloredFrameWithFocusSizeIncrease
         case coloredFrameWithContentViewInsets
+        case simple
         case mimickedMonogramView
         case customizedCaptionButton
     }
@@ -31,6 +32,8 @@ class TVLockupViewSampleController: UIViewController {
             addColoredFrameWithFocusSizeIncrease(to: view)
         case .coloredFrameWithContentViewInsets:
             addColoredFrameWithContentViewInsets(to: view)
+        case .simple:
+            addSimple(to: view)
         case .mimickedMonogramView:
             addMimickedMonogramView(to: view)
         case .customizedCaptionButton:
@@ -147,10 +150,12 @@ class TVLockupViewSampleController: UIViewController {
 
         view.addSubview(lockupView)
 
+        /*
         DispatchQueue.main.async {
             print(lockupView)
             print(lockupView.contentView)
         }
+        */
     }
 
     private func addColoredFrameWithFocusSizeIncrease(to view: UIView) {
@@ -164,6 +169,30 @@ class TVLockupViewSampleController: UIViewController {
             lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
             lockupView.contentViewInsets = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
         }
+    }
+
+    private func addSimple(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.frame = view.bounds
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+
+        let imageView = UIImageView(image: UIImage(named: "tokoro"))
+        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        lockupView.contentView.addSubview(imageView)
+
+        lockupView.sizeToFit()
+
+        view.addSubview(lockupView)
+
+        lockupView.backgroundColor = UIColor.red
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        /*
+        DispatchQueue.main.async {
+            print(lockupView)
+            print(lockupView.contentView)
+        }
+        */
     }
 }
 
