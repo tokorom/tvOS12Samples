@@ -13,6 +13,10 @@ class TVLockupViewSampleController: UIViewController {
         case coloredFrameWithFocusSizeIncrease
         case coloredFrameWithContentViewInsets
         case simple
+        case header
+        case footer
+        case headerAndFooter
+        case showsOnlyWhenAncestorFocused
         case mimickedMonogramView
         case customizedCaptionButton
     }
@@ -34,6 +38,14 @@ class TVLockupViewSampleController: UIViewController {
             addColoredFrameWithContentViewInsets(to: view)
         case .simple:
             addSimple(to: view)
+        case .header:
+            addHeader(to: view)
+        case .footer:
+            addFooter(to: view)
+        case .headerAndFooter:
+            addHeaderAndFooter(to: view)
+        case .showsOnlyWhenAncestorFocused:
+            addShowsOnlyWhenAncestorFocused(to: view)
         case .mimickedMonogramView:
             addMimickedMonogramView(to: view)
         case .customizedCaptionButton:
@@ -193,6 +205,86 @@ class TVLockupViewSampleController: UIViewController {
             print(lockupView.contentView)
         }
         */
+    }
+
+    private func addHeader(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        lockupView.headerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            return view
+        }()
+
+        lockupView.sizeToFit()
+        view.addSubview(lockupView)
+    }
+
+    private func addFooter(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        lockupView.footerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            return view
+        }()
+
+        lockupView.sizeToFit()
+        view.addSubview(lockupView)
+    }
+
+    private func addHeaderAndFooter(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        lockupView.headerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            return view
+        }()
+
+        lockupView.footerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            return view
+        }()
+
+        lockupView.sizeToFit()
+        view.addSubview(lockupView)
+    }
+
+    private func addShowsOnlyWhenAncestorFocused(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+        lockupView.contentView.backgroundColor = UIColor.blue
+
+        lockupView.headerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            view.showsOnlyWhenAncestorFocused = true
+            return view
+        }()
+
+        lockupView.footerView = {
+            let view = TVLockupHeaderFooterView()
+            view.titleLabel?.text = "title"
+            view.subtitleLabel?.text = "subtitle"
+            view.showsOnlyWhenAncestorFocused = true
+            return view
+        }()
+
+        lockupView.sizeToFit()
+        view.addSubview(lockupView)
     }
 }
 
