@@ -17,6 +17,7 @@ class TVLockupViewSampleController: UIViewController {
         case footer
         case headerAndFooter
         case showsOnlyWhenAncestorFocused
+        case simpleTVLockupViewComponent
         case mimickedMonogramView
         case customizedCaptionButton
     }
@@ -46,6 +47,8 @@ class TVLockupViewSampleController: UIViewController {
             addHeaderAndFooter(to: view)
         case .showsOnlyWhenAncestorFocused:
             addShowsOnlyWhenAncestorFocused(to: view)
+        case .simpleTVLockupViewComponent:
+            addSimpleTVLockupViewComponent(to: view)
         case .mimickedMonogramView:
             addMimickedMonogramView(to: view)
         case .customizedCaptionButton:
@@ -89,7 +92,7 @@ class TVLockupViewSampleController: UIViewController {
         // サンプルをシンプルにするためにこういう書き方にする
         // shadowもアニメーションさせるには別途CABasicAnimationなど使うこと
         faceView.animationsForNormal = {
-            faceView.transform = CGAffineTransform.identity
+            faceView.transform = .identity
 
             faceView.layer.shadowOpacity = 0.1
             faceView.layer.shadowRadius = 3
@@ -121,12 +124,10 @@ class TVLockupViewSampleController: UIViewController {
 
     private func addCustomizedCaptionButton(to view: UIView) {
         let captionButton = TVCaptionButtonView()
-
         captionButton.contentText = "$5.99"
         captionButton.title = "Footer"
 
         let headerView = TVLockupHeaderFooterView()
-        headerView.showsOnlyWhenAncestorFocused = true
         headerView.titleLabel?.text = "Header"
         captionButton.headerView = headerView
 
@@ -284,6 +285,24 @@ class TVLockupViewSampleController: UIViewController {
         lockupView.sizeToFit()
         view.addSubview(lockupView)
     }
+
+    private func addSimpleTVLockupViewComponent(to view: UIView) {
+        let lockupView = TVLockupView()
+        lockupView.contentSize = CGSize(width: 200, height: 200)
+        lockupView.focusSizeIncrease = NSDirectionalEdgeInsets(top: -23, leading: -23, bottom: -23, trailing: -23)
+
+        let faceView = SampleFaceView()
+        faceView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        faceView.setup()
+        faceView.imageView?.image = UIImage(named: "tokoro")
+        lockupView.contentView.addSubview(faceView)
+
+        lockupView.footerView = TVLockupHeaderFooterView()
+        lockupView.footerView?.titleLabel?.text = "tokorom"
+
+        lockupView.sizeToFit()
+        view.addSubview(lockupView)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -297,5 +316,29 @@ extension TVLockupViewSampleController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         addSampleView(to: cell.contentView, for: indexPath)
         return cell
+    }
+}
+
+// MARK: - SampleFaceView
+
+class SampleFaceView: UIView, TVLockupViewComponent {
+    var imageView: UIImageView?
+
+    func setup() {
+        let imageView = UIImageView()
+        imageView.frame = bounds
+        addSubview(imageView)
+        self.imageView = imageView
+    }
+
+    func updateAppearance(forLockupViewState state: UIControl.State) {
+        switch state {
+        case .normal:
+            transform = .identity
+        case .focused:
+            transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        default:
+            break
+        }
     }
 }
