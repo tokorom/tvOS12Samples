@@ -91,6 +91,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cIU-8Q-9iY" kind="show" id="2FJ-Ga-EGl"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="trd-c5-Ncp" style="IBUITableViewCellStyleDefault" id="Yu3-si-taE">
                                         <rect key="frame" x="110" y="320" width="1700" height="66"/>
@@ -141,6 +144,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR4-8a-cUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="-109"/>
+        </scene>
+        <!--UIKit-->
+        <scene sceneID="Qqf-rJ-uNF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIKit" id="cIU-8Q-9iY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwu-sQ-C6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="92"/>
         </scene>
         <!--Debug-->
         <scene sceneID="ZgW-eC-tQ7">
