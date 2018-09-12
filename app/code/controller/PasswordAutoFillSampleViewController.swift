@@ -22,7 +22,7 @@ class PasswordAutoFillSampleViewController: UIViewController {
     }
 
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        // preferredFocusEnvironmentsだけを使った方法ではtvOS 12 beta 9ではうまくいかないため無理やり
+        // preferredFocusEnvironmentsだけを使った方法ではtvOS 12 GMではうまくいかないため無理やり
         let previously = context.previouslyFocusedItem as? UIView
         if previously != idTextField && previously != passwordTextField && previously != logInButton {
             setNeedsFocusUpdate()
