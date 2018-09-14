@@ -15,7 +15,7 @@ class ScrollableCanvasView: CanvasView, UIFocusItemScrollableContainer {
         var x: CGFloat = 100
 
         while x + rectWidth < contentSize.width {
-            let rect = InteractionRect(x: x, y: 100, color: UIColor.blue.cgColor, parent: self)
+            let rect = MoveRect(x: x, y: 100, color: UIColor.blue.cgColor, parent: self)
             rects.append(rect)
             x += rectWidth + margin
         }
@@ -33,9 +33,7 @@ class ScrollableCanvasView: CanvasView, UIFocusItemScrollableContainer {
         }
 
         for rect in rects {
-            context.setFillColor(rect.color)
-            context.addPath(rect.path)
-            context.fillPath()
+            rect.draw(in: context)
         }
     }
 

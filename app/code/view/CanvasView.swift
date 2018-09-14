@@ -24,9 +24,7 @@ class CanvasView: UIView {
         }
 
         for rect in rects {
-            context.setFillColor(rect.color)
-            context.addPath(rect.path)
-            context.fillPath()
+            rect.draw(in: context)
         }
     }
 
@@ -72,12 +70,18 @@ class Rect: NSObject {
         self.parentView = parent
     }
 
-    var path: CGPath {
+    var renderFrame: CGRect {
         if isFocused {
-            return CGPath(rect: frame.insetBy(dx: -20, dy: -20), transform: nil)
+            return frame.insetBy(dx: -20, dy: -20)
         } else {
-            return CGPath(rect: frame, transform: nil)
+            return frame
         }
+    }
+
+    func draw(in context: CGContext) {
+        context.setFillColor(color)
+        context.addRect(renderFrame)
+        context.fillPath()
     }
 }
 
