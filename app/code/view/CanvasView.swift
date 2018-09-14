@@ -123,11 +123,11 @@ extension Rect: UIFocusItem {
 
     // required
     func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        let previously = context.previouslyFocusedItem as? Rect
-        let next = context.nextFocusedItem as? Rect
-
-        previously?.isFocused = false
-        next?.isFocused = true
+        if context.nextFocusedItem as? Rect == self {
+            self.isFocused = true
+        } else {
+            self.isFocused = false
+        }
 
         parentView?.setNeedsDisplay()
     }

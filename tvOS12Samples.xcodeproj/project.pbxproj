@@ -13,6 +13,8 @@
 		F3041E95214A6904005F7072 /* DoubleFocusItemContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3041E94214A6904005F7072 /* DoubleFocusItemContainer.storyboard */; };
 		F3041E97214B1959005F7072 /* UIFocusItemContainerWithMovement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3041E96214B1959005F7072 /* UIFocusItemContainerWithMovement.storyboard */; };
 		F3041E99214B1A2E005F7072 /* MoveCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3041E98214B1A2E005F7072 /* MoveCanvasView.swift */; };
+		F3041E9B214B8387005F7072 /* UIKitBaseCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3041E9A214B8387005F7072 /* UIKitBaseCanvasView.swift */; };
+		F3041E9D214B839F005F7072 /* UIKitBaseContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3041E9C214B839F005F7072 /* UIKitBaseContainer.storyboard */; };
 		F3108D062133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3108D052133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift */; };
 		F3108D082133A44900E9B6B2 /* TVDigitEntryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3108D072133A44900E9B6B2 /* TVDigitEntryViewController.storyboard */; };
 		F3108D0A2133A5EC00E9B6B2 /* TVLockupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3108D092133A5EC00E9B6B2 /* TVLockupView.storyboard */; };
@@ -69,6 +71,8 @@
 		F3041E94214A6904005F7072 /* DoubleFocusItemContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoubleFocusItemContainer.storyboard; sourceTree = "<group>"; };
 		F3041E96214B1959005F7072 /* UIFocusItemContainerWithMovement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIFocusItemContainerWithMovement.storyboard; sourceTree = "<group>"; };
 		F3041E98214B1A2E005F7072 /* MoveCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCanvasView.swift; sourceTree = "<group>"; };
+		F3041E9A214B8387005F7072 /* UIKitBaseCanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitBaseCanvasView.swift; sourceTree = "<group>"; };
+		F3041E9C214B839F005F7072 /* UIKitBaseContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKitBaseContainer.storyboard; sourceTree = "<group>"; };
 		F3108D052133A43700E9B6B2 /* TVDigitEntrySampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDigitEntrySampleViewController.swift; sourceTree = "<group>"; };
 		F3108D072133A44900E9B6B2 /* TVDigitEntryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVDigitEntryViewController.storyboard; sourceTree = "<group>"; };
 		F3108D092133A5EC00E9B6B2 /* TVLockupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVLockupView.storyboard; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 				F3041E8E214A232D005F7072 /* UIFocusItemContainer.storyboard */,
 				F3041E96214B1959005F7072 /* UIFocusItemContainerWithMovement.storyboard */,
 				F3041E94214A6904005F7072 /* DoubleFocusItemContainer.storyboard */,
+				F3041E9C214B839F005F7072 /* UIKitBaseContainer.storyboard */,
 				F33CB4EC2138F69300D81ADB /* Debug.storyboard */,
 				F33CB4EE2138F7DB00D81ADB /* RawCollectionView.storyboard */,
 				F33CB4F42138FBC100D81ADB /* RawCollectionViewWithButton.storyboard */,
@@ -299,6 +304,7 @@
 				F33CB4FA2138FDC200D81ADB /* FocusableImageView.swift */,
 				F3041E92214A251A005F7072 /* CanvasView.swift */,
 				F3041E98214B1A2E005F7072 /* MoveCanvasView.swift */,
+				F3041E9A214B8387005F7072 /* UIKitBaseCanvasView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				F3108D082133A44900E9B6B2 /* TVDigitEntryViewController.storyboard in Resources */,
 				F3E9C2B12132AEB500AD96F3 /* BookCardView.xib in Resources */,
 				F3C03F62212E9EEE002F69C2 /* TVUIKit.storyboard in Resources */,
+				F3041E9D214B839F005F7072 /* UIKitBaseContainer.storyboard in Resources */,
 				F35794E52147B2A600C466E6 /* UIKit.storyboard in Resources */,
 				F3E9C2C02132F85100AD96F3 /* TVMonogramView.storyboard in Resources */,
 				F3C03F60212E9E62002F69C2 /* Assets.xcassets in Resources */,
@@ -446,6 +453,7 @@
 				F35879742135722B008C4697 /* FaceView.swift in Sources */,
 				F3F80B6F213292630086BBFB /* TVCaptionButtonViewSampleController.swift in Sources */,
 				F33CB4F12138F8E000D81ADB /* RawCollectionViewSampleController.swift in Sources */,
+				F3041E9B214B8387005F7072 /* UIKitBaseCanvasView.swift in Sources */,
 				F3F80B6B213290D20086BBFB /* SampleButtonObjects.swift in Sources */,
 				F3C03F5E212E9E62002F69C2 /* AppDelegate.swift in Sources */,
 				F3E9C2BC2132B67600AD96F3 /* UINib+Util.swift in Sources */,
