@@ -90,7 +90,9 @@ extension Rect: UIFocusItem {
     var canBecomeFocused: Bool {
         return true
     }
+}
 
+extension Rect: UIFocusEnvironment {
     // required
     weak var parentFocusEnvironment: UIFocusEnvironment? {
         return parentView
