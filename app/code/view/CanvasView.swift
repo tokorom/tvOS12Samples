@@ -7,12 +7,16 @@
 import UIKit
 
 class CanvasView: UIView {
-    lazy var rects: [Rect] = [
-        Rect(x: 100, y: 100, color: UIColor.red.cgColor, parent: self),
-        Rect(x: 300, y: 100, color: UIColor.blue.cgColor, parent: self),
-        Rect(x: 100, y: 300, color: UIColor.green.cgColor, parent: self),
-        Rect(x: 300, y: 300, color: UIColor.red.cgColor, parent: self)
-    ]
+    lazy var rects: [Rect] = createRects()
+
+    func createRects() -> [Rect] {
+        return [
+            Rect(x: 100, y: 100, color: UIColor.red.cgColor, parent: self),
+            Rect(x: 300, y: 100, color: UIColor.blue.cgColor, parent: self),
+            Rect(x: 100, y: 300, color: UIColor.green.cgColor, parent: self),
+            Rect(x: 300, y: 300, color: UIColor.red.cgColor, parent: self)
+        ]
+    }
 
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {
@@ -52,6 +56,8 @@ extension CanvasView { //< UIFocusItemContainer
         return rects
     }
 }
+
+// MARK: - Rect
 
 class Rect: NSObject {
     let frame: CGRect
@@ -124,10 +130,5 @@ extension Rect: UIFocusItem {
         next?.isFocused = true
 
         parentView?.setNeedsDisplay()
-    }
-
-    // optional
-    func didHintFocusMovement(_ hint: UIFocusMovementHint) {
-        print("### didHint")
     }
 }

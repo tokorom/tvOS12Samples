@@ -38,8 +38,28 @@
                                             <segue destination="RXD-9i-Ogm" kind="show" id="GtF-cg-6Bi"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iCQ-XA-G9G" style="IBUITableViewCellStyleDefault" id="u7f-xn-z0b">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="IpG-lf-FUn" style="IBUITableViewCellStyleDefault" id="dSK-d8-NLX">
                                         <rect key="frame" x="110" y="80" width="1700" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dSK-d8-NLX" id="p0r-dm-3tg">
+                                            <rect key="frame" x="0.0" y="0.0" width="1640" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="UIFocusItemContainer with Movement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IpG-lf-FUn">
+                                                    <rect key="frame" x="20" y="0.0" width="1620" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Pls-0N-gxg" kind="show" id="cP2-iN-A2t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iCQ-XA-G9G" style="IBUITableViewCellStyleDefault" id="u7f-xn-z0b">
+                                        <rect key="frame" x="110" y="160" width="1700" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u7f-xn-z0b" id="Eg3-x2-3ex">
                                             <rect key="frame" x="0.0" y="0.0" width="1640" height="66"/>
@@ -81,13 +101,21 @@
             </objects>
             <point key="canvasLocation" x="1146" y="-386"/>
         </scene>
+        <!--UIFocusItemContainerWithMovement-->
+        <scene sceneID="gqA-fO-8Dy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIFocusItemContainerWithMovement" id="Pls-0N-gxg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo8-ZR-ZWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="-218"/>
+        </scene>
         <!--DoubleFocusItemContainer-->
         <scene sceneID="Wd5-nj-YO9">
             <objects>
                 <viewControllerPlaceholder storyboardName="DoubleFocusItemContainer" id="oFh-Nq-VeI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWC-xF-h0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="-130"/>
+            <point key="canvasLocation" x="1183" y="-83"/>
         </scene>
     </scenes>
 </document>
